@@ -296,8 +296,8 @@ int main(void)
   setTimer2(50);
  800029a:	2032      	movs	r0, #50	; 0x32
  800029c:	f000 fa40 	bl	8000720 <setTimer2>
-  setTimer3(10);
- 80002a0:	200a      	movs	r0, #10
+  setTimer3(50);
+ 80002a0:	2032      	movs	r0, #50	; 0x32
  80002a2:	f000 fa51 	bl	8000748 <setTimer3>
   int state = 0;
  80002a6:	2300      	movs	r3, #0
@@ -465,10 +465,10 @@ int main(void)
  80003d8:	681b      	ldr	r3, [r3, #0]
  80003da:	2b00      	cmp	r3, #0
  80003dc:	f47f af65 	bne.w	80002aa <main+0x32>
-		  setTimer3(10);
- 80003e0:	200a      	movs	r0, #10
+		  setTimer3(50);
+ 80003e0:	2032      	movs	r0, #50	; 0x32
  80003e2:	f000 f9b1 	bl	8000748 <setTimer3>
-		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
  80003e6:	2110      	movs	r1, #16
  80003e8:	4803      	ldr	r0, [pc, #12]	; (80003f8 <main+0x180>)
  80003ea:	f000 fd2b 	bl	8000e44 <HAL_GPIO_TogglePin>

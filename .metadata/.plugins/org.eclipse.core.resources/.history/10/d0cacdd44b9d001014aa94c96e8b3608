@@ -140,7 +140,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer1(10);
+  setTimer1(50);
   setTimer2(50);
   setTimer3(50);
   int state = 0;
