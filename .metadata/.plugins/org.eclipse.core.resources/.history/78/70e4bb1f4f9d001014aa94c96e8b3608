@@ -167,7 +167,6 @@ int main(void)
 			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, RESET);
 			  display7SEG(2);
 			  state--;
-			  break;
 		  }
 		  setTimer2(50);
 	  }

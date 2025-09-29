@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000162c7  00000000  00000000  0002ae98  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00009630  00000000  00000000  0004115f  2**0
+ 17 .debug_line   00009632  00000000  00000000  0004115f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0008201c  00000000  00000000  0004a78f  2**0
+ 18 .debug_str    0008201c  00000000  00000000  0004a791  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000cc7ab  2**0
+ 19 .comment      00000053  00000000  00000000  000cc7ad  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00002694  00000000  00000000  000cc800  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -312,10 +312,10 @@ int main(void)
  80002ac:	681b      	ldr	r3, [r3, #0]
  80002ae:	2b01      	cmp	r3, #1
  80002b0:	d106      	bne.n	80002c0 <main+0x48>
-			  setTimer1(10);
+		  setTimer1(10);
  80002b2:	200a      	movs	r0, #10
  80002b4:	f000 f9c4 	bl	8000640 <setTimer1>
-			  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
  80002b8:	2120      	movs	r1, #32
  80002ba:	4821      	ldr	r0, [pc, #132]	; (8000340 <main+0xc8>)
  80002bc:	f000 fd52 	bl	8000d64 <HAL_GPIO_TogglePin>
@@ -345,8 +345,6 @@ int main(void)
  80002e2:	2180      	movs	r1, #128	; 0x80
  80002e4:	4816      	ldr	r0, [pc, #88]	; (8000340 <main+0xc8>)
  80002e6:	f000 fd25 	bl	8000d34 <HAL_GPIO_WritePin>
-//			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
-//			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
 			  display7SEG(1);
  80002ea:	2001      	movs	r0, #1
  80002ec:	f7ff ff2e 	bl	800014c <display7SEG>
@@ -367,8 +365,6 @@ int main(void)
  8000304:	2180      	movs	r1, #128	; 0x80
  8000306:	480e      	ldr	r0, [pc, #56]	; (8000340 <main+0xc8>)
  8000308:	f000 fd14 	bl	8000d34 <HAL_GPIO_WritePin>
-//			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
-//			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
 			  display7SEG(2);
  800030c:	2002      	movs	r0, #2
  800030e:	f7ff ff1d 	bl	800014c <display7SEG>
@@ -378,15 +374,14 @@ int main(void)
  8000316:	607b      	str	r3, [r7, #4]
 			  break;
  8000318:	bf00      	nop
- //			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, RESET);
- //			  display7SEG(0);
- //			  state = 0;
- //			  break;
 		  }
 		  setTimer2(50);
  800031a:	2032      	movs	r0, #50	; 0x32
  800031c:	f000 f9a4 	bl	8000668 <setTimer2>
-	  }
+ //			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, RESET);
+ //			  display7SEG(0);
+ //			  state = 0;
+ //			  break;
 
 	  if(timer3_flag == 1){
  8000320:	4b09      	ldr	r3, [pc, #36]	; (8000348 <main+0xd0>)
