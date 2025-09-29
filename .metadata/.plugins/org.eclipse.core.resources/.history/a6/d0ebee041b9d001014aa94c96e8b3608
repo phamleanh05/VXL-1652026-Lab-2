@@ -141,7 +141,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   setTimer1(100);
-  setTimer2(50);
+  setTimer2(500);
   int state = 0;
   while (1)
   {
@@ -154,18 +154,18 @@ int main(void)
 	  if(timer2_flag == 1){
 		  switch(state){
 		  case 0:
-			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, RESET);
-			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
+			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
+			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, RESET);
 			  display7SEG(1);
 			  state++;
 			  break;
 		  case 1:
-			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
-			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, RESET);
+			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, RESET);
+			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
 			  display7SEG(2);
 			  state--;
 		  }
-		  setTimer2(50);
+		  setTimer2(500);
 	  }
     /* USER CODE BEGIN 3 */
   }
