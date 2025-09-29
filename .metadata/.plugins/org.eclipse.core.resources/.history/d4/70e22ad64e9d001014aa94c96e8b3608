@@ -159,16 +159,16 @@ int main(void)
 		  case 0:
 			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, RESET);
 			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
-//			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
-//			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
+			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
+			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
 			  display7SEG(1);
 			  state++;
 			  break;
 		  case 1:
 			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
 			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, RESET);
-//			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
-//			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
+			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
+			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
 			  display7SEG(2);
 			  state--;
 			  break;
