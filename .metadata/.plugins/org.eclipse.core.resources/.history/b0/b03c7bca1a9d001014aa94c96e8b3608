@@ -165,7 +165,6 @@ int main(void)
 			  display7SEG(2);
 			  state--;
 		  }
-		  setTimer2(500);
 	  }
     /* USER CODE BEGIN 3 */
   }
