@@ -143,7 +143,7 @@ int main(void)
   setTimer1(10);
   setTimer2(50);
   setTimer3(50);
-  int state = 0;
+//  int state = 0;
   while (1)
   {
     /* USER CODE END WHILE */
@@ -187,7 +187,7 @@ int main(void)
 			  state = 0;
 			  break;
 		  }
-		  setTimer2(50);
+		  setTimer2(500);
 	  }
 
 	  if(timer3_flag == 1){
