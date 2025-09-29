@@ -172,22 +172,22 @@ int main(void)
 			  display7SEG(2);
 			  state--;
 			  break;
- 		  case 2:
- 			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
- 			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
- 			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, RESET);
- 			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
- 			  display7SEG(3);
- 			  state++;
- 			  break;
- 		  case 3:
- 			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
- 			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
- 			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
- 			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, RESET);
- 			  display7SEG(0);
- 			  state = 0;
- 			  break;
+ //		  case 2:
+ //			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
+ //			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
+ //			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, RESET);
+ //			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
+ //			  display7SEG(3);
+ //			  state++;
+ //			  break;
+ //		  case 3:
+ //			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
+ //			  HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
+ //			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
+ //			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, RESET);
+ //			  display7SEG(0);
+ //			  state = 0;
+ //			  break;
 		  }
 		  setTimer2(50);
 	  }
