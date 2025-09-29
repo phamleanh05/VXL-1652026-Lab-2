@@ -391,9 +391,9 @@ int main(void)
 			  display7SEG(2);
  800034e:	2002      	movs	r0, #2
  8000350:	f7ff fefc 	bl	800014c <display7SEG>
-			  state--;
+			  state++;
  8000354:	687b      	ldr	r3, [r7, #4]
- 8000356:	3b01      	subs	r3, #1
+ 8000356:	3301      	adds	r3, #1
  8000358:	607b      	str	r3, [r7, #4]
 			  break;
  800035a:	e038      	b.n	80003ce <main+0x156>

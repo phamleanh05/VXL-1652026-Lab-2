@@ -170,7 +170,7 @@ int main(void)
 			  HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
 			  HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
 			  display7SEG(2);
-			  state++;
+			  state--;
 			  break;
  		  case 2:
  			  HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
