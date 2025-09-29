@@ -626,3 +626,92 @@
 2025-09-29 14:05:04,333 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2550mS.
 2025-09-29 14:05:04,334 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
 2025-09-29 14:05:04,336 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2025-09-29 16:29:26,157 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:29:27,810 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:30:49,648 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:30:53,544 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:30:55,453 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:30:59,009 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:31:00,627 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:31:02,678 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:31:19,572 [INFO] Pin:2088 - value.trim() 7SEG_0
+2025-09-29 16:31:19,573 [INFO] Pin:2089 - Pin value PB0
+2025-09-29 16:31:22,972 [INFO] Pin:2088 - value.trim() 7SEG_0
+2025-09-29 16:31:22,972 [INFO] Pin:2089 - Pin value PB0
+2025-09-29 16:31:30,704 [INFO] Pin:2088 - value.trim() 7SEG_0
+2025-09-29 16:31:30,704 [INFO] Pin:2089 - Pin value PB0
+2025-09-29 16:31:37,971 [INFO] Pin:2088 - value.trim() 7SEG_0
+2025-09-29 16:31:37,971 [INFO] Pin:2089 - Pin value PB0
+2025-09-29 16:31:50,421 [INFO] Pin:2088 - value.trim() 7SEG_0
+2025-09-29 16:31:50,427 [INFO] Pin:2089 - Pin value PB0
+2025-09-29 16:32:32,184 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-09-29 16:32:45,173 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 745194952 Bytes (1073741824)
+2025-09-29 16:32:46,770 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 757476016 Bytes (1073741824)
+2025-09-29 16:32:49,602 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 827746496 Bytes (1073741824)
+2025-09-29 16:32:49,992 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2025-09-29 16:32:49,993 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2025-09-29 16:32:49,993 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2025-09-29 16:32:49,993 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2025-09-29 16:32:49,993 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2025-09-29 16:32:49,994 [INFO] CodeGenerator:663 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2025-09-29 16:32:50,330 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/license.tmp_save
+2025-09-29 16:32:50,438 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/license.tmp
+2025-09-29 16:32:50,483 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/gpio.tmp_save
+2025-09-29 16:32:50,594 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/gpio.tmp
+2025-09-29 16:32:50,673 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/stm32f1xx_it.c_save
+2025-09-29 16:32:50,782 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/stm32f1xx_it.c
+2025-09-29 16:32:50,785 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/stm32f1xx_it.h_save
+2025-09-29 16:32:50,869 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/stm32f1xx_it.h
+2025-09-29 16:32:50,877 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/stm32f1xx_hal_msp.c_save
+2025-09-29 16:32:51,006 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/stm32f1xx_hal_msp.c
+2025-09-29 16:32:51,009 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/system.tmp_save
+2025-09-29 16:32:51,117 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/system.tmp
+2025-09-29 16:32:51,123 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/stm32f1xx_hal_conf.h_save
+2025-09-29 16:32:51,230 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/stm32f1xx_hal_conf.h
+2025-09-29 16:32:51,245 [WARN] IPConfigManager:3148 - IP not found : TIM
+2025-09-29 16:32:51,246 [WARN] CodeGenerator:3268 - IP not found : null
+2025-09-29 16:32:51,253 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/main.h_save
+2025-09-29 16:32:51,354 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/main.h
+2025-09-29 16:32:51,358 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/main.c_save
+2025-09-29 16:32:51,624 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/main.c
+2025-09-29 16:32:52,550 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 140mS.
+2025-09-29 16:32:52,553 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2025-09-29 16:32:53,136 [INFO] ConfigFileManager:1271 - The Die is : DIE412
+2025-09-29 16:32:55,531 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2978mS.
+2025-09-29 16:32:55,533 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
+2025-09-29 16:32:55,535 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2025-09-29 16:47:44,887 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 732410112 Bytes (1073741824)
+2025-09-29 16:47:46,534 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 744470784 Bytes (1073741824)
+2025-09-29 16:47:50,168 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 839055832 Bytes (1073741824)
+2025-09-29 16:47:50,417 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2025-09-29 16:47:50,417 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2025-09-29 16:47:50,417 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2025-09-29 16:47:50,417 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2025-09-29 16:47:50,417 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2025-09-29 16:47:50,418 [INFO] CodeGenerator:663 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2025-09-29 16:47:50,697 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/license.tmp_save
+2025-09-29 16:47:50,772 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/license.tmp
+2025-09-29 16:47:50,796 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/gpio.tmp_save
+2025-09-29 16:47:50,866 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/gpio.tmp
+2025-09-29 16:47:50,920 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/stm32f1xx_it.c_save
+2025-09-29 16:47:51,020 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/stm32f1xx_it.c
+2025-09-29 16:47:51,023 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/stm32f1xx_it.h_save
+2025-09-29 16:47:51,109 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/stm32f1xx_it.h
+2025-09-29 16:47:51,117 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/stm32f1xx_hal_msp.c_save
+2025-09-29 16:47:51,240 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/stm32f1xx_hal_msp.c
+2025-09-29 16:47:51,243 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/system.tmp_save
+2025-09-29 16:47:51,314 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/MXTmpFiles/system.tmp
+2025-09-29 16:47:51,320 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/stm32f1xx_hal_conf.h_save
+2025-09-29 16:47:51,437 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/stm32f1xx_hal_conf.h
+2025-09-29 16:47:51,448 [WARN] IPConfigManager:3148 - IP not found : TIM
+2025-09-29 16:47:51,449 [WARN] CodeGenerator:3268 - IP not found : null
+2025-09-29 16:47:51,453 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/main.h_save
+2025-09-29 16:47:51,532 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Inc/main.h
+2025-09-29 16:47:51,535 [INFO] CodeEngine:239 - oldGeneratedFile, /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/main.c_save
+2025-09-29 16:47:51,755 [INFO] CodeEngine:257 - Generated code: /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/lab2/Core/Src/main.c
+2025-09-29 16:47:52,389 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 159mS.
+2025-09-29 16:47:52,392 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2025-09-29 16:47:53,089 [INFO] ConfigFileManager:1271 - The Die is : DIE412
+2025-09-29 16:47:54,845 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2453mS.
+2025-09-29 16:47:54,845 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2025-09-29 16:47:54,848 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
