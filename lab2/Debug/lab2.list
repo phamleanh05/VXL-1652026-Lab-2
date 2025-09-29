@@ -130,10 +130,10 @@ int main(void)
 //		  setTimer2(500);
 //	  }
 
-	  if(timer3_flag == 0){
+	  if(timer3_flag == 1){
  8000178:	4b06      	ldr	r3, [pc, #24]	; (8000194 <main+0x48>)
  800017a:	681b      	ldr	r3, [r3, #0]
- 800017c:	2b00      	cmp	r3, #0
+ 800017c:	2b01      	cmp	r3, #1
  800017e:	d1fb      	bne.n	8000178 <main+0x2c>
 		  setTimer3(50);
  8000180:	2032      	movs	r0, #50	; 0x32
@@ -142,7 +142,7 @@ int main(void)
  8000186:	2110      	movs	r1, #16
  8000188:	4803      	ldr	r0, [pc, #12]	; (8000198 <main+0x4c>)
  800018a:	f000 fd13 	bl	8000bb4 <HAL_GPIO_TogglePin>
-	  if(timer3_flag == 0){
+	  if(timer3_flag == 1){
  800018e:	e7f3      	b.n	8000178 <main+0x2c>
  8000190:	20000040 	.word	0x20000040
  8000194:	2000003c 	.word	0x2000003c
