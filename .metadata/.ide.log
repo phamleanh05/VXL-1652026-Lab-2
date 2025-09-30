@@ -753,3 +753,13 @@
 2025-09-29 22:42:27,316 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 2568mS.
 2025-09-29 22:42:27,317 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
 2025-09-29 22:42:27,319 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2025-09-30 14:21:54,984 [INFO] Activator:177 - 
+
+
+2025-09-30 14:21:54,987 [INFO] Activator:178 - !SESSION log4j initialized
+2025-09-30 14:21:59,981 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2025-09-30 14:22:38,358 [INFO] Activator:177 - 
+
+
+2025-09-30 14:22:38,361 [INFO] Activator:178 - !SESSION log4j initialized
+2025-09-30 14:22:43,369 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
