@@ -269,16 +269,14 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 int state = 0;
-const int TIMER1 = 1000;
-const int TIMER2 = 500;
-int timer1_counter = TIMER1;
-int timer2_counter = TIMER2;
+int timer1_counter = 100;
+int timer2_counter = 500;
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
 	if(timer1_counter > 0){
 		timer1_counter--;
 		if(timer1_counter <= 0){
 			HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-			timer1_counter = TIMER1;
+			timer1_counter = 100;
 		}
 	}
 
@@ -298,7 +296,7 @@ void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
 			  display7SEG(2);
 			  state--;
 			}
-			timer2_counter = TIMER2;
+			timer2_counter = 500;
 		}
 	}
 }
