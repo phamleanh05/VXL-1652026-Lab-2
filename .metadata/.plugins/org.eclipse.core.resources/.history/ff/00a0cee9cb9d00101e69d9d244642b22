@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "timer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -272,6 +272,7 @@ int state = 0;
 int timer1_counter = 100;
 int timer2_counter = 500;
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
+
 	if(timer1_counter > 0){
 		timer1_counter--;
 		if(timer1_counter <= 0){
