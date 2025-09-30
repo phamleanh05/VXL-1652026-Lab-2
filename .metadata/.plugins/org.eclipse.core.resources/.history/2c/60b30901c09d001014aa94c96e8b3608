@@ -32,7 +32,9 @@ void setTimer3(int duration){
 }
 
 void timerRun(){
-	setTimer1(50);
+	setTimer1(int duration);
+	setTimer2(int duration);
+	setTimer3(int duration);
 	if(timer1_counter > 0){
 		timer1_counter--;
 		if(timer1_counter <= 0){
