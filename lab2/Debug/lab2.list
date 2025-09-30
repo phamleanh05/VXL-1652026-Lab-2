@@ -608,17 +608,17 @@ void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
  8000452:	b084      	sub	sp, #16
  8000454:	af00      	add	r7, sp, #0
  8000456:	6078      	str	r0, [r7, #4]
-	timerRun();
- 8000458:	f000 f988 	bl	800076c <timerRun>
 	setTimer1(10);
- 800045c:	200a      	movs	r0, #10
- 800045e:	f000 f949 	bl	80006f4 <setTimer1>
+ 8000458:	200a      	movs	r0, #10
+ 800045a:	f000 f94b 	bl	80006f4 <setTimer1>
 	setTimer2(50);
- 8000462:	2032      	movs	r0, #50	; 0x32
- 8000464:	f000 f95a 	bl	800071c <setTimer2>
+ 800045e:	2032      	movs	r0, #50	; 0x32
+ 8000460:	f000 f95c 	bl	800071c <setTimer2>
 	setTimer3(50);
- 8000468:	2032      	movs	r0, #50	; 0x32
- 800046a:	f000 f96b 	bl	8000744 <setTimer3>
+ 8000464:	2032      	movs	r0, #50	; 0x32
+ 8000466:	f000 f96d 	bl	8000744 <setTimer3>
+	timerRun();
+ 800046a:	f000 f97f 	bl	800076c <timerRun>
 	int state = 0;
  800046e:	2300      	movs	r3, #0
  8000470:	60fb      	str	r3, [r7, #12]
