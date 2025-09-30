@@ -345,31 +345,8 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-const int TIMER2 = 50;
-const int TIMER3 = 50;
-int timer_2 = TIMER2;
-int timer_3 = TIMER3;
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
 	timerRun();
-
-	if(timer_2 > 0){
-		timer_2--;
-		if(timer_2 <= 0){
-			if(index_led > MAX_LED){
-				index_led = 0;
-			}
-			update7SEG(index_led++);
-			timer_2 = TIMER2;
-		}
-	}
-
-	if(timer_3 > 0){
-		timer_3--;
-		if(timer_3 <= 0){
-			HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
-			timer_3 = TIMER3;
-		}
-	}
 }
 /* USER CODE END 4 */
 

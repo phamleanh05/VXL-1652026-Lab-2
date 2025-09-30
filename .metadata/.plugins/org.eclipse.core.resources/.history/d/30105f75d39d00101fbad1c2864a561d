@@ -349,6 +349,7 @@ const int TIMER2 = 50;
 const int TIMER3 = 50;
 int timer_2 = TIMER2;
 int timer_3 = TIMER3;
+
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
 	timerRun();
 
