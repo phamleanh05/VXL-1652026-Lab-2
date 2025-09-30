@@ -269,7 +269,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 int state = 0;
-const int TIMER1 = 1000;
+const int TIMER1 = 100;
 const int TIMER2 = 50;
 int timer1_counter = TIMER1;
 int timer2_counter = TIMER2;
