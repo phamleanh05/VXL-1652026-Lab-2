@@ -221,6 +221,7 @@ int main(void)
 			  hour =0;
 		  }
 		  updateClockBuffer(hour, minute);
+
 		  if(index_led > MAX_LED){
 			  index_led = 0;
 		  }
