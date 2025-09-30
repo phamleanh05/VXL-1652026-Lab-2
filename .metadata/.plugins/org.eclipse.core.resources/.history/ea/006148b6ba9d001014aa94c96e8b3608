@@ -113,7 +113,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
-		display7SEG(led_buffer[index]);
+		display7SEG(led_bufer[index]);
 		index++;
 		break;
 	case 1:
@@ -121,7 +121,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(GPIOA, EN1_Pin, RESET);
 		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
-		display7SEG(led_buffer[index]);
+		display7SEG(led_bufer[index]);
 		index++;
 		break;
 	case 2:
@@ -129,7 +129,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN2_Pin, RESET);
 		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
-		display7SEG(led_buffer[index]);
+		display7SEG(led_bufer[index]);
 		index++;
 		break;
 	case 3:
@@ -137,7 +137,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN3_Pin, RESET);
-		display7SEG(led_buffer[index]);
+		display7SEG(led_bufer[index]);
 		index++;
 		break;
 	}
@@ -182,7 +182,6 @@ int main(void)
   setTimer1(10);
   setTimer2(50);
   setTimer3(50);
-  int index = 0;
   while (1)
   {
     /* USER CODE END WHILE */
