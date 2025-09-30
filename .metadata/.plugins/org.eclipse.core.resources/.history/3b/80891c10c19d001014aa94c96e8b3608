@@ -142,6 +142,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   setTimer1(100);
   setTimer2(50);
+  int state = 0;
   while (1)
   {
     /* USER CODE END WHILE */
@@ -272,7 +273,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
 	timerRun();
-	int state = 0;
 	if(timer1_flag == 1){
 		setTimer1(100);
 		HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
