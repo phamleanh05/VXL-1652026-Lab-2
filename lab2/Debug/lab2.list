@@ -523,8 +523,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer1(10);
- 8000454:	200a      	movs	r0, #10
+  setTimer1(50);
+ 8000454:	2032      	movs	r0, #50	; 0x32
  8000456:	f000 f9e7 	bl	8000828 <setTimer1>
   setTimer3(50);
  800045a:	2032      	movs	r0, #50	; 0x32
