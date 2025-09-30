@@ -193,14 +193,10 @@ int main(void)
 		HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 	}
 
-	if(timer2_flag == 1){
-		if(index > MAX_LED){
-			index = 0;
-		}
-		update7SEG(index);
-		setTimer2(50);
+	if(index > MAX_LED){
+		index = 0;
 	}
-
+	update7SEG(index);
 
 	if(timer3_flag == 1){
 	  setTimer3(50);
