@@ -194,6 +194,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   setTimer1(10);
+  setTimer2(50);
   setTimer3(50);
   int hour = 15, minute = 8, second = 30;
   while (1)
@@ -357,7 +358,6 @@ int timer_2 = TIMER2;
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
 //	setTimer1(50);
 	timerRun();
-
 	if(timer_2 > 0){
 		timer_2--;
 		if(timer_2 <= 0){
