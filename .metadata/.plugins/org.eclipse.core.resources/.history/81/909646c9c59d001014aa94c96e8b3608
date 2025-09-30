@@ -106,7 +106,9 @@ void display7SEG(int num) {
 const int MAX_LED = 4;
 int index_led = 0;
 int led_buffer [4] = {1 , 2 , 3 , 4};
-void updateClockBuffer(int hour, int minute){
+void updateClockBuffer(){
+	int hour;
+	int minute;
 	if(hour < 10){
 		led_buffer[0] = 0;
 	}
@@ -118,8 +120,8 @@ void updateClockBuffer(int hour, int minute){
 		led_buffer[2] = 0;
 	}
 	if(minute > 10){
-		led_buffer[2] = minute/10;
-		led_buffer[3] = minute -(led_buffer[2]*10);
+		led_buffer[2] = min/10;
+		led_buffer[3] = min -(led_buffer[2]*10);
 	}
 }
 void update7SEG(int index){
@@ -212,7 +214,7 @@ int main(void)
 	  if(hour >= 24){
 		  hour =0;
 	  }
-	  updateClockBuffer(hour, minute);
+	  updateClockBuffer();
 	  HAL_Delay(1000);
 
   }
