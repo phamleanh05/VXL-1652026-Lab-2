@@ -159,24 +159,73 @@ void update7SEG(int index){
 
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
-uint8_t matrix_buffer [8] = {0x01 , 0x02 , 0x03 , 0x04 , 0x05 , 0x06 , 0x07 , 0x08};
+uint8_t matrix_buffer[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+
+/* Matrix row pins array */
+const uint16_t matrix_row_pins[8] = {
+    ROW0_Pin, ROW1_Pin, ROW2_Pin, ROW3_Pin,
+    ROW4_Pin, ROW5_Pin, ROW6_Pin, ROW7_Pin
+};
+
+/* Matrix enable pins array */
+const uint16_t matrix_en_pins[8] = {
+    ENM0_Pin, ENM1_Pin, ENM2_Pin, ENM3_Pin,
+    ENM4_Pin, ENM5_Pin, ENM6_Pin, ENM7_Pin
+};
+void setMatrixRow(uint8_t column_data) {
+    GPIO_PinState state0 = (column_data & (1 << 0)) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+    GPIO_PinState state1 = (column_data & (1 << 1)) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+    GPIO_PinState state2 = (column_data & (1 << 2)) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+    GPIO_PinState state3 = (column_data & (1 << 3)) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+    GPIO_PinState state4 = (column_data & (1 << 4)) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+    GPIO_PinState state5 = (column_data & (1 << 5)) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+    GPIO_PinState state6 = (column_data & (1 << 6)) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+    GPIO_PinState state7 = (column_data & (1 << 7)) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+
+    HAL_GPIO_WritePin(GPIOB, ROW0_Pin, state0);
+    HAL_GPIO_WritePin(GPIOB, ROW1_Pin, state1);
+    HAL_GPIO_WritePin(GPIOB, ROW2_Pin, state2);
+    HAL_GPIO_WritePin(GPIOB, ROW3_Pin, state3);
+    HAL_GPIO_WritePin(GPIOB, ROW4_Pin, state4);
+    HAL_GPIO_WritePin(GPIOB, ROW5_Pin, state5);
+    HAL_GPIO_WritePin(GPIOB, ROW6_Pin, state6);
+    HAL_GPIO_WritePin(GPIOB, ROW7_Pin, state7);
+}
+
 void updateLEDMatrix (int index ) {
-	switch(index){
+	HAL_GPIO_WritePin(GPIOA, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, GPIO_PIN_SET);
+	switch(index) {
 	case 0:
+		setMatrixRow(matrix_buffer[0]);
+		HAL_GPIO_WritePin(GPIOA, ENM0_Pin, RESET);
 		break;
 	case 1:
+		setMatrixRow(matrix_buffer[1]);
+		HAL_GPIO_WritePin(GPIOA, ENM1_Pin, RESET);
 		break;
 	case 2:
+		setMatrixRow(matrix_buffer[2]);
+		HAL_GPIO_WritePin(GPIOA, ENM2_Pin, RESET);
 		break;
 	case 3:
+		setMatrixRow(matrix_buffer[3]);
+		HAL_GPIO_WritePin(GPIOA, ENM3_Pin, RESET);
 		break;
 	case 4:
+		setMatrixRow(matrix_buffer[4]);
+		HAL_GPIO_WritePin(GPIOA, ENM4_Pin, RESET);
 		break;
 	case 5:
+		setMatrixRow(matrix_buffer[5]);
+		HAL_GPIO_WritePin(GPIOA, ENM5_Pin, RESET);
 		break;
 	case 6:
+		setMatrixRow(matrix_buffer[6]);
+		HAL_GPIO_WritePin(GPIOA, ENM6_Pin, RESET);
 		break;
 	case 7:
+		setMatrixRow(matrix_buffer[7]);
+		HAL_GPIO_WritePin(GPIOA, ENM7_Pin, RESET);
 		break;
 	default:
 		break;
@@ -222,6 +271,7 @@ int main(void)
   setTimer1(50);
   setTimer2(10);
   setTimer3(50);
+  setTimer4(10);
   int hour = 15, minute = 19, second = 30;
   while (1)
   {
@@ -257,6 +307,14 @@ int main(void)
 	  if(timer3_flag == 1){
 		  setTimer3(50);
 		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
+	  }
+
+	  if(timer4_flag == 1){
+		  setTimer4(10);
+		  if(index_led_matrix >= MAX_LED_MATRIX){
+			  index_led_matrix = 0;
+		  }
+		  updateLEDMatrix(index_led_matrix);
 	  }
 
   }
