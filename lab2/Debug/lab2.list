@@ -523,10 +523,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int hour = 15, minute = 8, second = 30;
+  int hour = 15, minute = 18, second = 30;
  8000454:	230f      	movs	r3, #15
  8000456:	60fb      	str	r3, [r7, #12]
- 8000458:	2308      	movs	r3, #8
+ 8000458:	2312      	movs	r3, #18
  800045a:	60bb      	str	r3, [r7, #8]
  800045c:	231e      	movs	r3, #30
  800045e:	607b      	str	r3, [r7, #4]
