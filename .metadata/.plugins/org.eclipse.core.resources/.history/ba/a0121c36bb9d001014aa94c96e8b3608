@@ -193,7 +193,7 @@ int main(void)
 		if(index > MAX_LED){
 			index = 0;
 		}
-		update7SEG(index++);
+		update7SEG(index);
 		setTimer2(50);
 	}
 

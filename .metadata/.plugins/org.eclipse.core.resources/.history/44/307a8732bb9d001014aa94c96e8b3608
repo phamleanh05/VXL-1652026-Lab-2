@@ -114,6 +114,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
 		display7SEG(led_buffer[index]);
+		index++;
 		break;
 	case 1:
 		HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
@@ -121,6 +122,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
 		display7SEG(led_buffer[index]);
+		index++;
 		break;
 	case 2:
 		HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
@@ -128,6 +130,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(GPIOA, EN2_Pin, RESET);
 		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
 		display7SEG(led_buffer[index]);
+		index++;
 		break;
 	case 3:
 		HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
@@ -135,6 +138,7 @@ void update7SEG(int index){
 		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
 		HAL_GPIO_WritePin(GPIOA, EN3_Pin, RESET);
 		display7SEG(led_buffer[index]);
+		index++;
 		break;
 	}
 }
@@ -193,7 +197,7 @@ int main(void)
 		if(index > MAX_LED){
 			index = 0;
 		}
-		update7SEG(index++);
+		update7SEG(index);
 		setTimer2(50);
 	}
 
