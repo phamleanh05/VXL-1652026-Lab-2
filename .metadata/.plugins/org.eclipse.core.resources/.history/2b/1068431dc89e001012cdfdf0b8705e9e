@@ -196,12 +196,11 @@ int main(void)
 	  }
 
 	  if(timer2_flag == 1){
-		  setTimer2(50);
+		  setTimer3(50);
 		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
 	  }
 
 	  if(timer3_flag == 1){
-		  setTimer3(100);
 		  second++;
 		  if(second >= 60){
 			  second = 0;

@@ -201,7 +201,6 @@ int main(void)
 	  }
 
 	  if(timer3_flag == 1){
-		  setTimer3(100);
 		  second++;
 		  if(second >= 60){
 			  second = 0;
