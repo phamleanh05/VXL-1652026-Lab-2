@@ -754,8 +754,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer1(50);
- 8000638:	2032      	movs	r0, #50	; 0x32
+  setTimer1(100);
+ 8000638:	2064      	movs	r0, #100	; 0x64
  800063a:	f000 f9fd 	bl	8000a38 <setTimer1>
   setTimer2(10);
  800063e:	200a      	movs	r0, #10
@@ -783,8 +783,8 @@ int main(void)
  800065e:	681b      	ldr	r3, [r3, #0]
  8000660:	2b01      	cmp	r3, #1
  8000662:	d106      	bne.n	8000672 <main+0x56>
-		setTimer1(50);
- 8000664:	2032      	movs	r0, #50	; 0x32
+		setTimer1(100);
+ 8000664:	2064      	movs	r0, #100	; 0x64
  8000666:	f000 f9e7 	bl	8000a38 <setTimer1>
 		HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
  800066a:	2120      	movs	r1, #32
