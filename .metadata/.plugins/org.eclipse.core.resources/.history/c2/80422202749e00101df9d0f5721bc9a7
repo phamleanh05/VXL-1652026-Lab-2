@@ -173,11 +173,11 @@ void updateLEDMatrix (int index ) {
 		break;
 	case 2:
 		setROWData(matrix_buffer[2]);
-//		HAL_GPIO_WritePin(GPIOA, ENM2_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM2_Pin, RESET);
 		break;
 	case 3:
 		setROWData(matrix_buffer[3]);
-//		HAL_GPIO_WritePin(GPIOA, ENM3_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM3_Pin, RESET);
 		break;
 	case 4:
 		setROWData(matrix_buffer[4]);
