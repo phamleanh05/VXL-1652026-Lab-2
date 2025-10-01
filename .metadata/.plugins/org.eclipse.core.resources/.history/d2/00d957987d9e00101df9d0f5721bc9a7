@@ -268,13 +268,13 @@ int main(void)
 			  hour =0;
 		  }
 		  updateClockBuffer(hour, minute);
-	  }
-
-	  if(timer3_flag == 1){
 		  index_led++;
 		  if(index_led > MAX_LED){
 			  index_led = 0;
 		  }
+	  }
+
+	  if(timer3_flag == 1){
 		  update7SEG(index_led);
 		  setTimer3(50);
 	  }
@@ -284,20 +284,16 @@ int main(void)
 		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
 	  }
 
-//	  if(timer5_flag == 1){
-//		  setTimer5(1);
-//		  if(index_led_matrix >= MAX_LED_MATRIX){
-//			  index_led_matrix = 0;
-//		  }
-//		  index_led_matrix++;
-//	  }
-
-	  if(timer6_flag == 1){
-		  setTimer6(1);
+	  if(timer5_flag == 1){
+		  setTimer5(1);
 		  if(index_led_matrix >= MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }
 		  index_led_matrix++;
+	  }
+
+	  if(timer6_flag == 1){
+		  setTimer6(1);
 		  updateLEDMatrix(index_led_matrix);
 	  }
 
