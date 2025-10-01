@@ -558,8 +558,8 @@ void updateLEDMatrix (int index ) {
  80004e6:	b082      	sub	sp, #8
  80004e8:	af00      	add	r7, sp, #0
  80004ea:	6078      	str	r0, [r7, #4]
-	HAL_GPIO_WritePin(GPIOA, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, SET);
- 80004ec:	2201      	movs	r2, #1
+	HAL_GPIO_WritePin(GPIOA, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, RESET);
+ 80004ec:	2200      	movs	r2, #0
  80004ee:	f64f 410c 	movw	r1, #64524	; 0xfc0c
  80004f2:	483e      	ldr	r0, [pc, #248]	; (80005ec <updateLEDMatrix+0x108>)
  80004f4:	f000 fe42 	bl	800117c <HAL_GPIO_WritePin>
