@@ -148,14 +148,14 @@ void update7SEG(int index){
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
 uint8_t matrix_buffer[8] = {
-	    0x00,  // Column 1: 00000000 (all OFF)
-	    0xC6,  // Column 2: 11000110 (rows 2,3,7,8 ON)
-	    0x6C,  // Column 3: 01101100 (rows 3,4,6,7 ON)
-	    0x38,  // Column 4: 00111000 (rows 4,5,6 ON)
-	    0x38,  // Column 5: 00111000 (rows 4,5,6 ON)
-	    0x6C,  // Column 6: 01101100 (rows 3,4,6,7 ON)
-	    0xC6,  // Column 7: 11000110 (rows 2,3,7,8 ON)
-	    0x00   // Column 8: 00000000 (all OFF)
+	    0x3C,  // Column 0: 00111100
+	    0x42,  // Column 1: 01000010
+	    0x42,  // Column 2: 01000010
+	    0x7E,  // Column 3: 01111110
+	    0x42,  // Column 4: 01000010
+	    0x42,  // Column 5: 01000010
+	    0x42,  // Column 6: 01000010
+	    0x00   // Column 7: 00000000 (empty column for spacing)
 };
 
 void setROWData(uint8_t data) {
