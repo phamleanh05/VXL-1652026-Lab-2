@@ -288,8 +288,8 @@ int main(void)
 		  if(index_led_matrix >= MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }
-//		  index_led_matrix++;
-		  updateLEDMatrix(index_led_matrix++);
+		  index_led_matrix++;
+		  updateLEDMatrix(index_led_matrix);
 	  }
 
   }
