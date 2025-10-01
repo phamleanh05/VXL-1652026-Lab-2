@@ -1046,9 +1046,9 @@ static void MX_TIM2_Init(void)
  80007e4:	4b19      	ldr	r3, [pc, #100]	; (800084c <MX_TIM2_Init+0x94>)
  80007e6:	2200      	movs	r2, #0
  80007e8:	609a      	str	r2, [r3, #8]
-  htim2.Init.Period = 0;
+  htim2.Init.Period = 9;
  80007ea:	4b18      	ldr	r3, [pc, #96]	; (800084c <MX_TIM2_Init+0x94>)
- 80007ec:	2200      	movs	r2, #0
+ 80007ec:	2209      	movs	r2, #9
  80007ee:	60da      	str	r2, [r3, #12]
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
  80007f0:	4b16      	ldr	r3, [pc, #88]	; (800084c <MX_TIM2_Init+0x94>)
