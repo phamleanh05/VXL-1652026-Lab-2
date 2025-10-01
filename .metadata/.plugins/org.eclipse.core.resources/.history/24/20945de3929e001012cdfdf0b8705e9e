@@ -196,7 +196,6 @@ int main(void)
   setTimer1(50);
   setTimer2(100);
   setTimer3(50);
-  setTimer4(50);
   int hour = 15, minute = 19, second = 30;
   while (1)
   {
