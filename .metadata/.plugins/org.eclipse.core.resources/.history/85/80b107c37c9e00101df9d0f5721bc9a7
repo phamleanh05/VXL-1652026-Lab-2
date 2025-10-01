@@ -147,7 +147,7 @@ void update7SEG(int index){
 
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
-uint8_t matrix_buffer [8] = {0x00, 0xFC, 0xFE, 0x1B, 0x1B, 0xFE, 0xFC, 0x00};
+uint8_t matrix_buffer [8] = {0x01 , 0x02 , 0x03 , 0x04 , 0x05 , 0x06 , 0x07 , 0x08};
 
 void row(uint8_t data) {
     HAL_GPIO_WritePin(GPIOB, ROW0_Pin, (data & 0x01) ? RESET : SET);
@@ -268,15 +268,14 @@ int main(void)
 			  hour =0;
 		  }
 		  updateClockBuffer(hour, minute);
-		  index_led++;
-		  if(index_led > MAX_LED){
-			  index_led = 0;
-		  }
 	  }
 
 	  if(timer3_flag == 1){
-		  update7SEG(index_led);
-		  setTimer3(50);
+		  if(index_led > MAX_LED){
+			  index_led = 0;
+		  }
+		  update7SEG(index_led++);
+		  setTimer(50);
 	  }
 
 	  if(timer4_flag == 1){
@@ -286,15 +285,15 @@ int main(void)
 
 	  if(timer5_flag == 1){
 		  setTimer5(1);
-		  if(index_led_matrix >= MAX_LED_MATRIX){
-			  index_led_matrix = 0;
-		  }
-		  index_led_matrix++;
+
 	  }
 
 	  if(timer6_flag == 1){
 		  setTimer6(1);
-		  updateLEDMatrix(index_led_matrix);
+		  if(index_led_matrix >= MAX_LED_MATRIX){
+			  index_led_matrix = 0;
+		  }
+		  updateLEDMatrix(index_led_matrix++);
 	  }
 
   }

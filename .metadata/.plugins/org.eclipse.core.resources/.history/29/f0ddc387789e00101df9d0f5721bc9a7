@@ -83,18 +83,4 @@ void timerRun(){
 			timer4_flag = 1;
 		}
 	}
-
-	if(timer5_counter > 0){
-		timer5_counter--;
-		if(timer5_counter <= 0){
-			timer5_flag = 1;
-		}
-	}
-
-	if(timer6_counter > 0){
-		timer6_counter--;
-		if(timer6_counter <= 0){
-			timer6_flag = 1;
-		}
-	}
 }
