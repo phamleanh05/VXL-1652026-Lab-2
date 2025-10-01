@@ -194,8 +194,8 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   setTimer1(50);
-  setTimer2(50);
-  setTimer3(100);
+  setTimer3(50);
+  setTimer4(100);
   int hour = 15, minute = 8, second = 30;
   while (1)
   {
