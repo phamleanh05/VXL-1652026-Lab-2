@@ -165,7 +165,7 @@ void updateLEDMatrix (int index ) {
 	switch(index) {
 	case 0:
 		setROWData(matrix_buffer[0]);
-//		HAL_GPIO_WritePin(GPIOA, ENM0_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM0_Pin, RESET);
 		break;
 	case 1:
 		setROWData(matrix_buffer[1]);

@@ -147,7 +147,16 @@ void update7SEG(int index){
 
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
-uint8_t matrix_buffer[8] = {0x00, 0xFC, 0xFE, 0x1B, 0x1B, 0xFE, 0xFC, 0x00};
+uint8_t matrix_buffer[8] = {
+	    0x00,  // Column 1: 00000000 (all OFF)
+	    0xFC,  // Column 2: 11111100 (rows 3,4,5,6,7,8 ON)
+	    0xFE,  // Column 3: 11111110 (rows 2,3,4,5,6,7,8 ON)
+	    0x1B,  // Column 4: 00011011 (rows 2,4,5,8 ON)
+	    0x1B,  // Column 5: 00011011 (rows 2,4,5,8 ON)
+	    0xFE,  // Column 6: 11111110 (rows 2,3,4,5,6,7,8 ON)
+	    0xFC,  // Column 7: 11111100 (rows 3,4,5,6,7,8 ON)
+	    0x00   // Column 8: 00000000 (all OFF)
+};
 
 void setROWData(uint8_t data) {
     HAL_GPIO_WritePin(GPIOB, ROW0_Pin, (data & 0x01) ? RESET : SET);
@@ -165,7 +174,7 @@ void updateLEDMatrix (int index ) {
 	switch(index) {
 	case 0:
 		setROWData(matrix_buffer[0]);
-//		HAL_GPIO_WritePin(GPIOA, ENM0_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM0_Pin, RESET);
 		break;
 	case 1:
 		setROWData(matrix_buffer[1]);
