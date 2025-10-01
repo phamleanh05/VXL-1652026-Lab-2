@@ -763,8 +763,8 @@ int main(void)
   setTimer3(50);
  8000644:	2032      	movs	r0, #50	; 0x32
  8000646:	f000 fa1f 	bl	8000a88 <setTimer3>
-  setTimer4(50);
- 800064a:	2032      	movs	r0, #50	; 0x32
+  setTimer4(2);
+ 800064a:	2002      	movs	r0, #2
  800064c:	f000 fa30 	bl	8000ab0 <setTimer4>
   int hour = 15, minute = 19, second = 30;
  8000650:	230f      	movs	r3, #15
@@ -880,8 +880,8 @@ int main(void)
  80006f0:	681b      	ldr	r3, [r3, #0]
  80006f2:	2b01      	cmp	r3, #1
  80006f4:	d1b2      	bne.n	800065c <main+0x40>
-		  setTimer4(50);
- 80006f6:	2032      	movs	r0, #50	; 0x32
+		  setTimer4(2);
+ 80006f6:	2002      	movs	r0, #2
  80006f8:	f000 f9da 	bl	8000ab0 <setTimer4>
 		  if(index_led_matrix >= MAX_LED_MATRIX){
  80006fc:	4b0f      	ldr	r3, [pc, #60]	; (800073c <main+0x120>)
