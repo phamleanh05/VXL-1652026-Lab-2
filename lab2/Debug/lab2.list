@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00016387  00000000  00000000  0002b1c0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000097db  00000000  00000000  00041547  2**0
+ 17 .debug_line   000097d9  00000000  00000000  00041547  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000823f7  00000000  00000000  0004ad22  2**0
+ 18 .debug_str    000823f7  00000000  00000000  0004ad20  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000cd119  2**0
+ 19 .comment      00000053  00000000  00000000  000cd117  2**0
                   CONTENTS, READONLY
  20 .debug_frame  000027a0  00000000  00000000  000cd16c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -786,7 +786,6 @@ int main(void)
   setTimer5(1);
  8000674:	2001      	movs	r0, #1
  8000676:	f000 fa51 	bl	8000b1c <setTimer5>
-//  setTimer6(1);
   int hour = 15, minute = 19, second = 30;
  800067a:	230f      	movs	r3, #15
  800067c:	60fb      	str	r3, [r7, #12]
@@ -907,10 +906,7 @@ int main(void)
  8000722:	2110      	movs	r1, #16
  8000724:	4810      	ldr	r0, [pc, #64]	; (8000768 <main+0x128>)
  8000726:	f000 fdb3 	bl	8001290 <HAL_GPIO_TogglePin>
-//			  index_led_matrix = 0;
-//		  }
-//		  index_led_matrix++;
-//	  }
+	  }
 
 	  if(timer5_flag == 1){
  800072a:	4b14      	ldr	r3, [pc, #80]	; (800077c <main+0x13c>)
