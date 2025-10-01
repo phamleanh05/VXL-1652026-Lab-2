@@ -159,14 +159,14 @@ uint8_t matrix_buffer[8] = {
 };
 
 void setROWData(uint8_t data) {
-    HAL_GPIO_WritePin(GPIOB, ROW0_Pin, (data & 0x01) ? RESET : SET);
-    HAL_GPIO_WritePin(GPIOB, ROW1_Pin, (data & 0x02) ? RESET : SET);
-    HAL_GPIO_WritePin(GPIOB, ROW2_Pin, (data & 0x04) ? RESET : SET);
-    HAL_GPIO_WritePin(GPIOB, ROW3_Pin, (data & 0x08) ? RESET : SET);
-    HAL_GPIO_WritePin(GPIOB, ROW4_Pin, (data & 0x10) ? RESET : SET);
-    HAL_GPIO_WritePin(GPIOB, ROW5_Pin, (data & 0x20) ? RESET : SET);
-    HAL_GPIO_WritePin(GPIOB, ROW6_Pin, (data & 0x40) ? RESET : SET);
-    HAL_GPIO_WritePin(GPIOB, ROW7_Pin, (data & 0x80) ? RESET : SET);
+    HAL_GPIO_WritePin(GPIOB, ROW0_Pin, (data & 0x01) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, ROW1_Pin, (data & 0x02) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, ROW2_Pin, (data & 0x04) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, ROW3_Pin, (data & 0x08) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, ROW4_Pin, (data & 0x10) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, ROW5_Pin, (data & 0x20) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, ROW6_Pin, (data & 0x40) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, ROW7_Pin, (data & 0x80) ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
 void updateLEDMatrix (int index ) {
