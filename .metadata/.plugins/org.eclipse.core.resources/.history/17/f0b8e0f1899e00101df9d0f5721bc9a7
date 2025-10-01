@@ -239,8 +239,7 @@ int main(void)
   setTimer1(100);
   setTimer2(100);
   setTimer3(50);
-  setTimer4(50);
-  setTimer5(1);
+  setTimer4(1);
   int hour = 15, minute = 19, second = 30;
   while (1)
   {
@@ -284,13 +283,12 @@ int main(void)
 	  }
 
 	  if(timer5_flag == 1){
-		  setTimer5(1);
+		  setTimer5(50);
 		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
 		  if(index_led_matrix >= MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }
-		  updateLEDMatrix(index_led_matrix);
-		  index_led_matrix++;
+		  updateLEDMatrix(index_led_matrix++);
 	  }
 
   }
