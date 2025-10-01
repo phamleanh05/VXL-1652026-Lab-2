@@ -280,7 +280,7 @@ int main(void)
 	  }
 
 	  if(timer4_flag == 1){
-		  setTimer4(50);
+		  setTimer4(1);
 		  if(index_led_matrix >= MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }
