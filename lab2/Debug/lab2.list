@@ -460,7 +460,7 @@ void update7SEG(int index){
 
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
-uint8_t matrix_buffer[8] = {0x18, 0x18, 0xFE, 0xFF, 0xFF, 0x3C, 0x5A, 0xA5};
+uint8_t matrix_buffer[8] = {0xA5, 0x5A, 0x3C, 0xFF, 0xFF, 0xFE, 0x18, 0x18};
 
 void row(uint8_t data) {
  8000418:	b580      	push	{r7, lr}
