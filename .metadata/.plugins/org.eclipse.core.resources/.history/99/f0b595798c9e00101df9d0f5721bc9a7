@@ -160,7 +160,7 @@ void row(uint8_t data) {
     HAL_GPIO_WritePin(GPIOB, ROW7_Pin, (data & 0x80) ? RESET : SET);
 }
 
-void updateLEDMatrix (int index) {
+void updateLEDMatrix (int index ) {
 	HAL_GPIO_WritePin(GPIOA, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, SET);
 	switch(index) {
 	case 0:

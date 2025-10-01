@@ -149,6 +149,11 @@ const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
 uint8_t matrix_buffer[8] = {0x00, 0xFC, 0xFE, 0x1B, 0x1B, 0xFE, 0xFC, 0x00};
 
+void updateMatrix(uint8_t new_matrix[8]){
+	new_matrix[index] = matrix_buffer[index];
+	index++;
+}
+
 void row(uint8_t data) {
     HAL_GPIO_WritePin(GPIOB, ROW0_Pin, (data & 0x01) ? RESET : SET);
     HAL_GPIO_WritePin(GPIOB, ROW1_Pin, (data & 0x02) ? RESET : SET);
@@ -285,6 +290,11 @@ int main(void)
 
 	  if(timer5_flag == 1){
 		  setTimer5(1);
+		  uint8_t new_matrix[8] = {0x00, 0xFC, 0xFE, 0x1B, 0x1B, 0xFE, 0xFC, 0x00};
+		  updateMatrix(new_matrix[8]);
+	  }
+	  if(timer6_flag == 1){
+		  setTimer6(1);
 		  if(index_led_matrix >= MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }

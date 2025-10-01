@@ -1,0 +1,23 @@
+/*
+ * function.h
+ *
+ *  Created on: Oct 1, 2025
+ *      Author: admin
+ */
+
+#ifndef INC_FUNCTION_H_
+#define INC_FUNCTION_H_
+
+void display7SEG(int num);
+const int MAX_LED = 4;
+int index_led = 0;
+int led_buffer [4] = {1 , 2 , 3 , 4};
+void updateClockBuffer(int hour, int minute);
+void update7SEG(int index);
+const int MAX_LED_MATRIX = 8;
+int index_led_matrix = 0;
+uint8_t matrix_buffer[8] = {0x00, 0xFC, 0xFE, 0x1B, 0x1B, 0xFE, 0xFC, 0x00};
+void row(uint8_t data);
+
+
+#endif /* INC_FUNCTION_H_ */

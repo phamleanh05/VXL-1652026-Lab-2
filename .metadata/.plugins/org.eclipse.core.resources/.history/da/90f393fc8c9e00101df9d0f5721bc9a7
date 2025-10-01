@@ -1,0 +1,147 @@
+/*
+ * function.c
+ *
+ *  Created on: Oct 1, 2025
+ *      Author: admin
+ */
+#include "function.h"
+
+void display7SEG(int num) {
+    if (num < 0 || num > 9) num = 0;
+
+    switch (num){
+	case 0:
+		HAL_GPIO_WritePin(GPIOB, G_7SEG_Pin, SET);
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | B_7SEG_Pin | C_7SEG_Pin | D_7SEG_Pin | E_7SEG_Pin | F_7SEG_Pin, RESET);
+		break;
+	case 1:
+		HAL_GPIO_WritePin(GPIOB, B_7SEG_Pin | C_7SEG_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | D_7SEG_Pin | E_7SEG_Pin | F_7SEG_Pin | G_7SEG_Pin, SET);
+		break;
+	case 2:
+		HAL_GPIO_WritePin(GPIOB, F_7SEG_Pin | C_7SEG_Pin, SET);
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | B_7SEG_Pin | D_7SEG_Pin | E_7SEG_Pin | G_7SEG_Pin, RESET);
+		break;
+	case 3:
+		HAL_GPIO_WritePin(GPIOB, F_7SEG_Pin | E_7SEG_Pin, SET);
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | B_7SEG_Pin | C_7SEG_Pin | D_7SEG_Pin | G_7SEG_Pin, RESET);
+		break;
+	case 4:
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | E_7SEG_Pin | D_7SEG_Pin, SET);
+		HAL_GPIO_WritePin(GPIOB, B_7SEG_Pin | C_7SEG_Pin | F_7SEG_Pin | G_7SEG_Pin, RESET);
+		break;
+	case 5:
+		HAL_GPIO_WritePin(GPIOB, B_7SEG_Pin | E_7SEG_Pin, SET);
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | C_7SEG_Pin | D_7SEG_Pin | F_7SEG_Pin | G_7SEG_Pin, RESET);
+		break;
+	case 6:
+		HAL_GPIO_WritePin(GPIOB, B_7SEG_Pin, SET);
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | C_7SEG_Pin | D_7SEG_Pin | E_7SEG_Pin | F_7SEG_Pin | G_7SEG_Pin, RESET);
+		break;
+	case 7:
+		HAL_GPIO_WritePin(GPIOB, F_7SEG_Pin | G_7SEG_Pin | E_7SEG_Pin | D_7SEG_Pin, SET);
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | B_7SEG_Pin | C_7SEG_Pin, RESET);
+		break;
+	case 8:
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | B_7SEG_Pin | C_7SEG_Pin | D_7SEG_Pin | E_7SEG_Pin | F_7SEG_Pin | G_7SEG_Pin, RESET);
+		break;
+	case 9:
+		HAL_GPIO_WritePin(GPIOB, E_7SEG_Pin, SET);
+		HAL_GPIO_WritePin(GPIOB, A_7SEG_Pin | B_7SEG_Pin | C_7SEG_Pin | D_7SEG_Pin | F_7SEG_Pin | G_7SEG_Pin, RESET);
+		break;
+	default:
+		break;
+	}
+}
+
+void updateClockBuffer(int hour, int minute){
+	led_buffer[0] = hour / 10;
+	led_buffer[1] = hour % 10;
+	led_buffer[2] = minute / 10;
+	led_buffer[3] = minute % 10;
+}
+
+void update7SEG(int index){
+	switch(index){
+	case 0:
+		HAL_GPIO_WritePin(GPIOA, EN0_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
+		display7SEG(led_buffer[index]);
+		break;
+	case 1:
+		HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN1_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
+		display7SEG(led_buffer[index]);
+		break;
+	case 2:
+		HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN2_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, EN3_Pin, SET);
+		display7SEG(led_buffer[index]);
+		break;
+	case 3:
+		HAL_GPIO_WritePin(GPIOA, EN0_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN1_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN2_Pin, SET);
+		HAL_GPIO_WritePin(GPIOA, EN3_Pin, RESET);
+		display7SEG(led_buffer[index]);
+		break;
+	}
+}
+
+void row(uint8_t data) {
+    HAL_GPIO_WritePin(GPIOB, ROW0_Pin, (data & 0x01) ? RESET : SET);
+    HAL_GPIO_WritePin(GPIOB, ROW1_Pin, (data & 0x02) ? RESET : SET);
+    HAL_GPIO_WritePin(GPIOB, ROW2_Pin, (data & 0x04) ? RESET : SET);
+    HAL_GPIO_WritePin(GPIOB, ROW3_Pin, (data & 0x08) ? RESET : SET);
+    HAL_GPIO_WritePin(GPIOB, ROW4_Pin, (data & 0x10) ? RESET : SET);
+    HAL_GPIO_WritePin(GPIOB, ROW5_Pin, (data & 0x20) ? RESET : SET);
+    HAL_GPIO_WritePin(GPIOB, ROW6_Pin, (data & 0x40) ? RESET : SET);
+    HAL_GPIO_WritePin(GPIOB, ROW7_Pin, (data & 0x80) ? RESET : SET);
+}
+
+void updateLEDMatrix (int index) {
+	HAL_GPIO_WritePin(GPIOA, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, SET);
+	switch(index) {
+	case 0:
+		row(matrix_buffer[index]);
+		HAL_GPIO_WritePin(GPIOA, ENM0_Pin, RESET);
+		break;
+	case 1:
+		row(matrix_buffer[index]);
+		HAL_GPIO_WritePin(GPIOA, ENM1_Pin, RESET);
+		break;
+	case 2:
+		row(matrix_buffer[index]);
+		HAL_GPIO_WritePin(GPIOA, ENM2_Pin, RESET);
+		break;
+	case 3:
+		row(matrix_buffer[index]);
+		HAL_GPIO_WritePin(GPIOA, ENM3_Pin, RESET);
+		break;
+	case 4:
+		row(matrix_buffer[index]);
+		HAL_GPIO_WritePin(GPIOA, ENM4_Pin, RESET);
+		break;
+	case 5:
+		row(matrix_buffer[index]);
+		HAL_GPIO_WritePin(GPIOA, ENM5_Pin, RESET);
+		break;
+	case 6:
+		row(matrix_buffer[index]);
+		HAL_GPIO_WritePin(GPIOA, ENM6_Pin, RESET);
+		break;
+	case 7:
+		row(matrix_buffer[index]);
+		HAL_GPIO_WritePin(GPIOA, ENM7_Pin, RESET);
+		break;
+	default:
+		break;
+	}
+}
+

@@ -283,8 +283,8 @@ int main(void)
 		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
 	  }
 
-	  if(timer5_flag == 1){
-		  setTimer5(1);
+	  if(timer6_flag == 1){
+		  setTimer6(1);
 		  if(index_led_matrix >= MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }

@@ -572,7 +572,7 @@ void row(uint8_t data) {
 
 0800050c <updateLEDMatrix>:
 
-void updateLEDMatrix (int index ) {
+void updateLEDMatrix (int index) {
  800050c:	b580      	push	{r7, lr}
  800050e:	b082      	sub	sp, #8
  8000510:	af00      	add	r7, sp, #0
