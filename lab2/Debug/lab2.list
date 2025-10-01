@@ -457,10 +457,10 @@ void update7SEG(int index){
  8000414:	20000000 	.word	0x20000000
 
 08000418 <row>:
-	    0xFE,
-	    0xFC,
-	    0x00
-		};
+
+const int MAX_LED_MATRIX = 8;
+int index_led_matrix = 0;
+uint8_t matrix_buffer[8] = {0x00, 0xFC, 0xFE, 0x1B, 0x1B, 0xFE, 0xFC, 0x00};
 
 void row(uint8_t data) {
  8000418:	b580      	push	{r7, lr}
