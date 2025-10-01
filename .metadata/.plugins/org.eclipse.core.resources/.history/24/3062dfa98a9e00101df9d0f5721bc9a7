@@ -281,17 +281,16 @@ int main(void)
 	  if(timer4_flag == 1){
 		  setTimer4(50);
 		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
-		  updateLEDMatrix(index_led_matrix);
 	  }
 
-//	  if(timer5_flag == 1){
-//		  setTimer5(1);
-//		  if(index_led_matrix >= MAX_LED_MATRIX){
-//			  index_led_matrix = 0;
-//		  }
-//		  updateLEDMatrix(index_led_matrix);
-//		  index_led_matrix++;
-//	  }
+	  if(timer5_flag == 1){
+		  setTimer5(1);
+		  if(index_led_matrix >= MAX_LED_MATRIX){
+			  index_led_matrix = 0;
+		  }
+		  updateLEDMatrix(index_led_matrix);
+		  index_led_matrix++;
+	  }
 
   }
   /* USER CODE END 3 */
