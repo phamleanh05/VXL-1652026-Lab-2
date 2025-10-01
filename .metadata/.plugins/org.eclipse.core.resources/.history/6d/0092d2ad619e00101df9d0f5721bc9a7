@@ -181,7 +181,7 @@ void setMatrixRow(uint8_t column_data) {
 }
 
 void updateLEDMatrix (int index ) {
-	HAL_GPIO_WritePin(GPIOA, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, SET);
+	HAL_GPIO_WritePin(GPIOA, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, RESET);
 	switch(index) {
 	case 0:
 		setMatrixRow(matrix_buffer[0]);
