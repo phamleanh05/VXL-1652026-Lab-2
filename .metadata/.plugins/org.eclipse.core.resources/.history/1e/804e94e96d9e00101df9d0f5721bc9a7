@@ -248,7 +248,7 @@ int main(void)
   setTimer1(50);
   setTimer2(10);
   setTimer3(50);
-  setTimer4(1);
+  setTimer4(2);
   int hour = 15, minute = 19, second = 30;
   while (1)
   {
@@ -287,7 +287,7 @@ int main(void)
 	  }
 
 	  if(timer4_flag == 1){
-		  setTimer4(1);
+		  setTimer4(2);
 		  if(index_led_matrix >= MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }
@@ -354,7 +354,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 7999;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 0;
+  htim2.Init.Period = 9;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
