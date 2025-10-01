@@ -147,7 +147,7 @@ void update7SEG(int index){
 
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
-uint8_t matrix_buffer[8] = {0xA5, 0x5A, 0x3C, 0xFF, 0xFF, 0xFE, 0x18, 0x18};
+uint8_t matrix_buffer [8] = {0x00, 0xFC, 0xFE, 0x1B, 0x1B, 0xFE, 0xFC, 0x00};
 
 void row(uint8_t data) {
     HAL_GPIO_WritePin(GPIOB, ROW0_Pin, (data & 0x01) ? RESET : SET);
@@ -165,35 +165,35 @@ void updateLEDMatrix (int index ) {
 	switch(index) {
 	case 0:
 		row(matrix_buffer[index]);
-		HAL_GPIO_WritePin(GPIOA, ENM7_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM0_Pin, RESET);
 		break;
 	case 1:
 		row(matrix_buffer[index]);
-		HAL_GPIO_WritePin(GPIOA, ENM6_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM1_Pin, RESET);
 		break;
 	case 2:
 		row(matrix_buffer[index]);
-		HAL_GPIO_WritePin(GPIOA, ENM5_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM2_Pin, RESET);
 		break;
 	case 3:
 		row(matrix_buffer[index]);
-		HAL_GPIO_WritePin(GPIOA, ENM4_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM3_Pin, RESET);
 		break;
 	case 4:
 		row(matrix_buffer[index]);
-		HAL_GPIO_WritePin(GPIOA, ENM3_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM4_Pin, RESET);
 		break;
 	case 5:
 		row(matrix_buffer[index]);
-		HAL_GPIO_WritePin(GPIOA, ENM2_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM5_Pin, RESET);
 		break;
 	case 6:
 		row(matrix_buffer[index]);
-		HAL_GPIO_WritePin(GPIOA, ENM1_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM6_Pin, RESET);
 		break;
 	case 7:
 		row(matrix_buffer[index]);
-		HAL_GPIO_WritePin(GPIOA, ENM0_Pin, RESET);
+		HAL_GPIO_WritePin(GPIOA, ENM7_Pin, RESET);
 		break;
 	default:
 		break;
@@ -237,9 +237,10 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   setTimer1(100);
-  setTimer2(10);
+  setTimer2(100);
   setTimer3(50);
-  setTimer4(1);
+  setTimer4(50);
+  setTimer5(1);
   int hour = 15, minute = 19, second = 30;
   while (1)
   {
@@ -252,7 +253,7 @@ int main(void)
 	  }
 
 	  if(timer2_flag == 1){
-		  setTimer2(10);
+		  setTimer2(100);
 		  second++;
 		  if(second >= 60){
 			  second = 0;
@@ -266,22 +267,28 @@ int main(void)
 			  hour =0;
 		  }
 		  updateClockBuffer(hour, minute);
-		  if(index_led > MAX_LED){
-			  index_led = 0;
-		  }
-		  update7SEG(index_led++);
 	  }
 
 	  if(timer3_flag == 1){
+		  index_led++;
+		  if(index_led > MAX_LED){
+			  index_led = 0;
+		  }
+		  update7SEG(index_led);
 		  setTimer3(50);
-		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
 	  }
 
 	  if(timer4_flag == 1){
-		  setTimer4(1);
+		  setTimer4(50);
+		  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
+	  }
+
+	  if(timer5_flag == 1){
+		  setTimer5(1);
 		  if(index_led_matrix >= MAX_LED_MATRIX){
 			  index_led_matrix = 0;
 		  }
+//		  index_led_matrix++;
 		  updateLEDMatrix(index_led_matrix++);
 	  }
 
