@@ -287,6 +287,7 @@ int main(void)
 
 	  if(timer5_flag == 1){
 		  setTimer5(10);
+		  updateLedBuffer()
 	  }
 	  if(timer6_flag == 1){
 		  setTimer6(1);
