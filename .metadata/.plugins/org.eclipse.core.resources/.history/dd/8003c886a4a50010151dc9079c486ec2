@@ -147,8 +147,6 @@ void update7SEG(int index){
 
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
-int matrix = 0;
-int matrix_num = 0;
 uint8_t matrix_buffer[8] = {0x1f,0x30,0x60,0xc0,0xc0,0x60,0x30,0x1f};
 uint8_t matrix_buffer_2[8] = {0xf8,0x0c,0x06,0x03,0x03,0x06,0x0c,0xf8};
 
@@ -163,22 +161,6 @@ void row(uint8_t data) {
     HAL_GPIO_WritePin(GPIOB, ROW7_Pin, (data & 0x80) ? RESET : SET);
 }
 
-void updateLedBuffer(int matrix){
-	switch(matrix){
-	case 0:
-		matrix_buffer[matrix_num] = matrix_buffer[matrix_num];
-		matrix_num++;
-		if (matrix_num > MAX_LED_MATRIX){
-			break;
-		}
-	case 1:
-		matrix_buffer[matrix_num] = matrix_buffer_2[matrix_num];
-		matrix_num++;
-		if (matrix_num > MAX_LED_MATRIX){
-			break;
-		}
-	}
-}
 void updateLEDMatrix (int index) {
 	HAL_GPIO_WritePin(GPIOA, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, SET);
 	switch(index) {
@@ -305,13 +287,7 @@ int main(void)
 
 	  if(timer5_flag == 1){
 		  setTimer5(10);
-		  updateLedBuffer(matrix);
-		  matrix++;
-		  if(matrix > 1){
-			  matrix = 0;
-		  }
 	  }
-
 	  if(timer6_flag == 1){
 		  setTimer6(1);
 		  if(index_led_matrix >= MAX_LED_MATRIX){

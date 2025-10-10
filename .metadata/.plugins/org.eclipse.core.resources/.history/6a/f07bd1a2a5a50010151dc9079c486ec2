@@ -305,10 +305,10 @@ int main(void)
 
 	  if(timer5_flag == 1){
 		  setTimer5(10);
-		  updateLedBuffer(matrix);
-		  matrix++;
-		  if(matrix > 1){
-			  matrix = 0;
+		  updateLedBuffer(led);
+		  led++;
+		  if(led > 1){
+			  led = 0;
 		  }
 	  }
 
