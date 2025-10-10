@@ -860,8 +860,8 @@ int main(void)
   setTimer4(50);
  80006ea:	2032      	movs	r0, #50	; 0x32
  80006ec:	f000 fa5e 	bl	8000bac <setTimer4>
-  setTimer5(10);
- 80006f0:	200a      	movs	r0, #10
+  setTimer5(1);
+ 80006f0:	2001      	movs	r0, #1
  80006f2:	f000 fa6f 	bl	8000bd4 <setTimer5>
   setTimer6(1);
  80006f6:	2001      	movs	r0, #1
@@ -993,8 +993,8 @@ int main(void)
  80007ae:	681b      	ldr	r3, [r3, #0]
  80007b0:	2b01      	cmp	r3, #1
  80007b2:	d113      	bne.n	80007dc <main+0x120>
-		  setTimer5(50);
- 80007b4:	2032      	movs	r0, #50	; 0x32
+		  setTimer5(1);
+ 80007b4:	2001      	movs	r0, #1
  80007b6:	f000 fa0d 	bl	8000bd4 <setTimer5>
 		  updateLedBuffer(matrix);
  80007ba:	4b1d      	ldr	r3, [pc, #116]	; (8000830 <main+0x174>)
