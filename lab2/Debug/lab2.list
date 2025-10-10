@@ -509,12 +509,12 @@ int main(void)
   setTimer4(50);
  8000446:	2032      	movs	r0, #50	; 0x32
  8000448:	f000 fa1c 	bl	8000884 <setTimer4>
-  int hour = 15, minute = 19, second = 30;
+  int hour = 15, minute = 19, second = 55;
  800044c:	230f      	movs	r3, #15
  800044e:	60fb      	str	r3, [r7, #12]
  8000450:	2313      	movs	r3, #19
  8000452:	60bb      	str	r3, [r7, #8]
- 8000454:	231e      	movs	r3, #30
+ 8000454:	2337      	movs	r3, #55	; 0x37
  8000456:	607b      	str	r3, [r7, #4]
   while (1)
   {

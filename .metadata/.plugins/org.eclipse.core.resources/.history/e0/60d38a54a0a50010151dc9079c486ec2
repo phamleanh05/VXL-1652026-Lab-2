@@ -185,7 +185,7 @@ int main(void)
   setTimer2(100);
   setTimer3(50);
   setTimer4(50);
-  int hour = 15, minute = 19, second = 55;
+  int hour = 15, minute = 19, second = 30;
   while (1)
   {
     /* USER CODE END WHILE */
