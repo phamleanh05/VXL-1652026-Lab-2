@@ -334,7 +334,7 @@
    </POPUP>
    <POPUP w="600" x="678" flags="0000002b" y="760" h="400" pid="100" iid="1">
     <PROPERTIES>
-     <ITEM name="Breakpoint 0">"",8000558,0000,B7ED,BFBE,889489656
+     <ITEM name="Breakpoint 0">"",8000560,0000,B7ED,BFBE,889489656
 </ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
