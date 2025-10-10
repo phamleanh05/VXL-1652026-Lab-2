@@ -1339,3 +1339,13 @@
 2025-10-01 09:29:23,779 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
 2025-10-01 09:29:25,430 [INFO] DbMcusDocs:143 - JSON generation date=Tue Nov 16 23:17:54 ICT 2021 (1637079474)
 2025-10-01 09:29:25,651 [INFO] DbMcusDocs:79 - Found 682 MCUs documents
+2025-10-03 14:58:32,302 [INFO] Activator:177 - 
+
+
+2025-10-03 14:58:32,306 [INFO] Activator:178 - !SESSION log4j initialized
+2025-10-03 14:58:42,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2025-10-10 11:52:40,382 [INFO] Activator:177 - 
+
+
+2025-10-10 11:52:40,385 [INFO] Activator:178 - !SESSION log4j initialized
+2025-10-10 11:52:47,584 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 

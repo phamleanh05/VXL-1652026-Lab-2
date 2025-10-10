@@ -472,3 +472,29 @@ java.lang.Exception: The project description file (.project) for 'lab2' is missi
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-10-01 07:48:10.533
 !MESSAGE Indexed 'lab2' (20 sources, 98 headers) in 5.39 sec: 7,520 declarations; 36,770 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0.42%)
+!SESSION 2025-10-03 14:58:24.375 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_VN
+Framework arguments:  -keyring /Users/admin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/admin/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-03 14:58:32.300
+!MESSAGE Log4j initialized with config file /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-03 14:58:47.504
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-10 11:52:32.644 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_VN
+Framework arguments:  -keyring /Users/admin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/admin/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-10 11:52:40.380
+!MESSAGE Log4j initialized with config file /Users/admin/Documents/BK-University/VXL/LAB/VXL-1652026-Lab-2/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-10 11:52:57.759
+!MESSAGE Started RMI Server, listening on port 41337
