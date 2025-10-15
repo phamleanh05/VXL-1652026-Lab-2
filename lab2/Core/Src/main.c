@@ -328,7 +328,9 @@ void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
 			if(index_led > MAX_LED){
 				index_led = 0;
 			}
-			update7SEG(index_led++);
+			index_led++;
+			index_led = index_led % 4;
+			update7SEG(index_led);
 			timer2_counter = TIMER2;
 		}
 	}
@@ -376,3 +378,4 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
